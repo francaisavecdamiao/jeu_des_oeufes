@@ -9,6 +9,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyB15yAKNPROKQ2e36e7H_fp57ezpnNK9xo",
   authDomain: "jeu-des-oeufs.firebaseapp.com",
+  databaseURL: "https://jeu-des-oeufs-default-rtdb.firebaseio.com",
   projectId: "jeu-des-oeufs",
   storageBucket: "jeu-des-oeufs.firebasestorage.app",
   messagingSenderId: "84953040188",
