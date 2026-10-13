@@ -86,7 +86,7 @@ function renderTopbar(){
   bar.innerHTML = `
     ${H.resumed ? `<span class="resume-note">jogo retomado de onde você parou</span>` : ''}
     <div class="topbar-row">
-      <img src="images/LOGO.png" alt="" class="topbar-logo" onerror="this.style.display='none'">
+      <img src="images/logo_fad.png" alt="" class="topbar-logo" onerror="this.style.display='none'">
       <span class="level-label">${esc(label)}</span>
       ${botoes}
     </div>`;
@@ -358,8 +358,8 @@ function desenharQR(){
 }
 
 async function iniciarJogo(){
-  playSound('click');
   if(!Object.keys(H.jogadores).length) return;
+  playSound('start');
   try{ await gameRef(H.pin,'estado').set({ fase:'jogo', total:H.quiz.paragrafos.length, iniciadoEm: SERVER_TS }); }catch(e){}
   H.tela = 'jogo';
   render();
