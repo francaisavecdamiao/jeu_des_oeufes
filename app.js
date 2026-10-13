@@ -27,8 +27,13 @@ const SOUND_FILES = {
   ok:'sounds/ok.mp3',
   falha:'sounds/falha.mp3',
   level:'sounds/level.mp3',
-  win:'sounds/win01.mp3'
+  win:'sounds/win01.mp3',
+  clicksuave:'sounds/clicksuave.mp3',   // clique nas palavras do texto
+  fase:'sounds/fase.mp3',               // passar de parágrafo (fase)
+  start:'sounds/start.mp3'              // início do jogo
 };
+const VOLUME_PADRAO = 0.85;
+const SOUND_VOLUMES = { clicksuave: VOLUME_PADRAO * 0.3 };   // 30% do volume padrão
 const som = {
   muted:false,
   init(){ try{ this.muted = localStorage.getItem('oeufs_mute') === '1'; }catch(e){} },
@@ -46,7 +51,7 @@ function playSound(name){
   try{
     const src = SOUND_FILES[name]; if(!src) return;
     const a = new Audio(src);
-    a.volume = 0.85;
+    a.volume = SOUND_VOLUMES[name] !== undefined ? SOUND_VOLUMES[name] : VOLUME_PADRAO;
     a.play().catch(()=>{});
   }catch(e){}
 }
@@ -129,10 +134,14 @@ function serverNow(){ return Date.now() + serverOffset; }
    ========================================================= */
 function custoNivel(n){ return Math.max(0, (Number(n)||1) - 1); }
 
+/* nível 1: verde · 2 → 5: amarelo → laranja · 5 → 10 (ou mais): laranja → vermelho */
 function corNivel(n){
   const k = Math.min(10, Math.max(1, Math.round(Number(n)||1)));
-  const hue = 120 - (k - 1) * (120 / 9);          // 120 (verde) → 0 (vermelho)
-  return `hsl(${hue.toFixed(0)}, 78%, 40%)`;
+  if(k === 1) return 'hsl(120, 70%, 38%)';
+  let hue;
+  if(k <= 5) hue = 50 - ((k - 2) / 3) * (50 - 28);   // 50 (amarelo) → 28 (laranja)
+  else       hue = 28 - ((k - 5) / 5) * 28;          // 28 (laranja) → 0 (vermelho)
+  return `hsl(${hue.toFixed(0)}, 92%, 46%)`;
 }
 function rotuloNivel(n){ return n >= 10 ? '10+' : String(n); }
 
