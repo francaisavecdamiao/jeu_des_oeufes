@@ -7,13 +7,13 @@
    ========================================================= */
 
 const firebaseConfig = {
-  apiKey: "COLE_AQUI",
-  authDomain: "SEU-PROJETO.firebaseapp.com",
-  databaseURL: "https://SEU-PROJETO-default-rtdb.firebaseio.com",
-  projectId: "SEU-PROJETO",
-  storageBucket: "SEU-PROJETO.firebasestorage.app",
-  messagingSenderId: "000000000000",
-  appId: "COLE_AQUI"
+  apiKey: "AIzaSyB15yAKNPROKQ2e36e7H_fp57ezpnNK9xo",
+  authDomain: "jeu-des-oeufs.firebaseapp.com",
+  projectId: "jeu-des-oeufs",
+  storageBucket: "jeu-des-oeufs.firebasestorage.app",
+  messagingSenderId: "84953040188",
+  appId: "1:84953040188:web:3a6e659e59a20993b38a39",
+  measurementId: "G-CHKF65SZBN"
 };
 
 /* inicialização (SDK compat carregado por CDN nas páginas) */
