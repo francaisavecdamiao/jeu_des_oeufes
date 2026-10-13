@@ -76,7 +76,7 @@ function renderTopbar(){
   if(PAGE === 'entrada'){
     bar.innerHTML = `
       <div class="topbar-row">
-        <img src="images/LOGO.png" alt="" class="topbar-logo" onerror="this.style.display='none'">
+        <img src="images/logo_fad.png" alt="" class="topbar-logo" onerror="this.style.display='none'">
         <span class="level-label">jeu des oeufs</span>
       </div>
       <div class="progress-track"><div class="progress-fill" style="width:0%"></div></div>`;
@@ -367,13 +367,13 @@ function clicarVoc(vi){
     const custo = custoNivel(v.nivel);
     P.revelados[pi][vi] = true;
     P.ovos = Math.max(0, P.ovos - custo);
-    playSound(custo > 0 ? 'falha' : 'click');
+    playSound('clicksuave');
     const up = {};
     up[`jogadores/${P.id}/ovos`] = P.ovos;
     up[`jogadores/${P.id}/revelados/${pi}/${vi}`] = true;
     try{ gameRef(P.pin).update(up); }catch(e){}
   } else {
-    playSound('click');
+    playSound('clicksuave');
   }
   render();
   const b = document.getElementById('ovosBadge');
@@ -383,7 +383,7 @@ function clicarVoc(vi){
 function proximoParagrafo(){
   if(!P.paragrafos) return;
   const total = P.paragrafos.length;
-  playSound('level');
+  playSound('fase');
   P.ultima = null;
   const up = {};
   if(P.par + 1 < total){
@@ -455,8 +455,13 @@ function ouvirJogo(){
   on('estado', s => {
     const e = s.val() || {};
     const antes = P.fase;
+    const primeira = !P.estadoVisto;          // não toca o som ao recarregar a página
+    P.estadoVisto = true;
     P.fase = e.fase === 'jogo' ? 'jogo' : 'lobby';
-    if(antes !== P.fase){ playSound('level'); render(); }
+    if(antes !== P.fase){
+      if(!primeira && P.fase === 'jogo') playSound('start');
+      render();
+    }
   });
 
   on('paragrafos', s => {
