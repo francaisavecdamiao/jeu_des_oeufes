@@ -1,0 +1,114 @@
+/* =========================================================
+   JEU DES OEUFS — estilos específicos (somam-se ao styles.css)
+   ========================================================= */
+
+/* ---------- TEXTO COM VOCABULÁRIO SUBLINHADO ---------- */
+.texto-par{
+  width:100%; text-align:left;
+  font-size:21px; line-height:2.35; color:var(--text);
+  margin:2px 0 6px;
+}
+.voc{
+  --c:#48B832;
+  cursor:pointer;
+  border-bottom:4px solid var(--c);
+  border-radius:3px 3px 0 0;
+  padding:0 1px 1px;
+  transition:background .15s ease;
+  -webkit-user-select:none; user-select:none;
+}
+.voc:hover{ background:color-mix(in srgb, var(--c) 14%, #fff); }
+.voc:active{ transform:translateY(1px); }
+.voc.aberto{
+  background:color-mix(in srgb, var(--c) 20%, #fff);
+  border-bottom-style:dotted;
+}
+
+/* legenda dos 10 níveis */
+.legenda{
+  display:flex; flex-wrap:wrap; gap:5px; justify-content:center;
+  width:100%; margin:6px 0 2px;
+}
+.legenda-item{
+  display:flex; flex-direction:column; align-items:center; gap:2px;
+  font-size:10px; font-weight:800; color:var(--text-light);
+}
+.legenda-cor{
+  width:26px; height:10px; border-radius:999px;
+}
+.legenda-nota{ font-size:12px; color:var(--text-light); text-align:center; margin:4px 0 0; width:100%; }
+
+/* painel de traduções reveladas */
+.trad-lista{ display:flex; flex-direction:column; gap:8px; width:100%; }
+.trad-item{
+  --c:#48B832;
+  display:flex; align-items:flex-start; gap:10px; text-align:left;
+  background:var(--bg); border:2px solid var(--border);
+  border-left:8px solid var(--c);
+  border-radius:var(--radius-sm); padding:8px 12px;
+  font-size:15px; line-height:1.4;
+  animation:popIn .25s ease;
+}
+.trad-item strong{ font-weight:800; }
+.trad-item .trad-custo{
+  margin-left:auto; flex-shrink:0; font-weight:800; font-size:13px;
+  color:var(--text-light); white-space:nowrap;
+}
+.trad-item.nova{ background:#FFF5EA; border-color:var(--amarelo); border-left-color:var(--c); }
+.trad-vazia{ font-size:14px; color:var(--text-light); text-align:center; margin:0; width:100%; }
+
+/* abas texto / ranking */
+.abas{ display:flex; gap:8px; width:100%; }
+.aba{
+  flex:1; font-family:'Feather Bold','Nunito',sans-serif; font-size:15px; text-transform:lowercase;
+  background:#fff; color:var(--laranja-escuro);
+  border:2px solid var(--amarelo); border-radius:999px; padding:9px 10px; cursor:pointer;
+}
+.aba.on{ background:var(--laranja-escuro); color:#fff; border-color:var(--laranja-dark); }
+
+.par-contador{ font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.4px; color:var(--text-light); margin:0 0 8px; width:100%; text-align:center; }
+
+/* ovos */
+.ovos-badge{
+  font-size:15px; background:#FFF5EA; color:var(--laranja-escuro);
+  border:2px solid var(--amarelo); border-radius:999px; padding:4px 12px;
+  white-space:nowrap; flex-shrink:0;
+  font-family:'Feather Bold','Nunito',sans-serif;
+}
+.ovos-badge.baixo{ color:var(--vermelho); border-color:var(--vermelho); }
+.ovos-badge.pop{ animation:pulse .4s ease; }
+
+/* ranking (aluno e host) */
+.rank-ovos{ font-size:22px; color:var(--laranja-escuro); white-space:nowrap; font-family:'Feather Bold','Nunito',sans-serif; }
+.rank-row.eu{ background:#FFF5EA; border-color:var(--laranja-escuro); }
+.rank-row.fim .rank-name::after{ content:' ✓'; color:var(--green-correct-dark); }
+.rank-list.duas{ display:grid; grid-template-columns:1fr 1fr; gap:10px 16px; }
+body.host .rank-ovos{ font-size:26px; }
+body.host .rank-name{ font-size:24px; }
+body.host .rank-row img{ width:52px; height:52px; }
+
+/* host: ranking ocupa a tela toda */
+body.host .ranking-grande{ width:100%; flex:1; }
+body.host .ranking-grande .rank-list{ gap:10px; }
+
+/* editor */
+.q-card textarea{
+  width:100%; min-height:120px; resize:vertical;
+  font-family:'Nunito',sans-serif; font-size:15px; line-height:1.5;
+  padding:10px 12px; border:2px solid var(--border); border-radius:var(--radius-sm);
+  outline:none; color:var(--text); background:#fff;
+}
+.q-card textarea:focus{ border-color:var(--amarelo); }
+.q-card textarea.vocab{ min-height:170px; font-size:14px; }
+.q-aviso{ font-size:12px; font-weight:700; color:var(--vermelho-dark); background:#FDF0F0; border-radius:var(--radius-sm); padding:6px 10px; }
+.q-ok{ font-size:12px; font-weight:700; color:var(--green-correct-dark); }
+.ajuda-card{ font-size:13px; color:var(--text-light); line-height:1.55; background:var(--bg); border:2px dashed var(--border); border-radius:var(--radius-md); padding:10px 14px; }
+.ajuda-card code{ background:#fff; border:1px solid var(--border); border-radius:6px; padding:1px 5px; font-size:12px; }
+
+/* fim de jogo do aluno */
+.ovo-grande{ font-size:64px; line-height:1; margin:4px 0; }
+
+@media (max-width:560px){
+  .texto-par{ font-size:19px; line-height:2.3; }
+  .rank-list.duas{ grid-template-columns:1fr; }
+}

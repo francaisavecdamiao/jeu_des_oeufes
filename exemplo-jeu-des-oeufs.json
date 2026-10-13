@@ -1,0 +1,806 @@
+{
+  "titulo": "Jeu des Oeufs — Parágrafos 6 a 10",
+  "descricao": "Laurent, Sophie et Adèle chez la grand-mère",
+  "paragrafos": [
+    {
+      "texto": "Après l'école, ils vont chez leur grand-mère avec leur cousin Léo. Elle habite près de la bibliothèque du village. “Vous arrivez enfin !” dit la grand-mère, heureuse. Le grand-père et l'oncle sont déjà là, assis dans le jardin. Laurent et Léo courent ensemble vers la maison.",
+      "vocabulario": [
+        {
+          "termo": "Après",
+          "traducao": "depois de",
+          "nivel": 1
+        },
+        {
+          "termo": "l'école",
+          "traducao": "a escola",
+          "nivel": 1
+        },
+        {
+          "termo": "ils",
+          "traducao": "eles",
+          "nivel": 1
+        },
+        {
+          "termo": "vont",
+          "traducao": "significa \"vão\" do verbo aller = ir",
+          "nivel": 1
+        },
+        {
+          "termo": "Chez",
+          "traducao": "na casa de",
+          "nivel": 1
+        },
+        {
+          "termo": "leur grand-mère",
+          "traducao": "a avó deles",
+          "nivel": 1
+        },
+        {
+          "termo": "avec",
+          "traducao": "com",
+          "nivel": 1
+        },
+        {
+          "termo": "leur cousin",
+          "traducao": "o primo deles/ seu primo",
+          "nivel": 1
+        },
+        {
+          "termo": "Elle",
+          "traducao": "ela",
+          "nivel": 1
+        },
+        {
+          "termo": "habite",
+          "traducao": "significa \"mora / habita\" do verbo habiter = morar / habitar",
+          "nivel": 1
+        },
+        {
+          "termo": "près de",
+          "traducao": "perto de",
+          "nivel": 1
+        },
+        {
+          "termo": "la bibliothèque",
+          "traducao": "a biblioteca",
+          "nivel": 1
+        },
+        {
+          "termo": "du village",
+          "traducao": "do vilarejo / da vila",
+          "nivel": 1
+        },
+        {
+          "termo": "Vous",
+          "traducao": "vocês/o senhor/a senhora",
+          "nivel": 1
+        },
+        {
+          "termo": "arrivez",
+          "traducao": "significa \"chegam\" do verbo arriver = chegar",
+          "nivel": 1
+        },
+        {
+          "termo": "enfin",
+          "traducao": "finalmente",
+          "nivel": 1
+        },
+        {
+          "termo": "dit",
+          "traducao": "significa \"diz\" do verbo dire = dizer",
+          "nivel": 1
+        },
+        {
+          "termo": "la grand-mère",
+          "traducao": "a avó",
+          "nivel": 1
+        },
+        {
+          "termo": "heureuse",
+          "traducao": "feliz",
+          "nivel": 1
+        },
+        {
+          "termo": "Le grand-père",
+          "traducao": "o avô",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 1
+        },
+        {
+          "termo": "l'oncle",
+          "traducao": "o tio",
+          "nivel": 1
+        },
+        {
+          "termo": "sont",
+          "traducao": "significa \"são / estão\" do verbo être = ser / estar",
+          "nivel": 1
+        },
+        {
+          "termo": "déjà",
+          "traducao": "já",
+          "nivel": 1
+        },
+        {
+          "termo": "là",
+          "traducao": "lá / ali",
+          "nivel": 1
+        },
+        {
+          "termo": "assis",
+          "traducao": "sentados",
+          "nivel": 1
+        },
+        {
+          "termo": "dans",
+          "traducao": "em / dentro de",
+          "nivel": 1
+        },
+        {
+          "termo": "le jardin",
+          "traducao": "o jardim",
+          "nivel": 1
+        },
+        {
+          "termo": "courent",
+          "traducao": "significa \"correm\" do verbo courir = correr",
+          "nivel": 1
+        },
+        {
+          "termo": "ensemble",
+          "traducao": "juntos",
+          "nivel": 1
+        },
+        {
+          "termo": "vers",
+          "traducao": "em direção a / para/ à",
+          "nivel": 1
+        },
+        {
+          "termo": "la maison",
+          "traducao": "a casa",
+          "nivel": 1
+        }
+      ]
+    },
+    {
+      "texto": "Chez la grand-mère, elle prépare un goûter délicieux. Elle sert des biscuits, du chocolat chaud et du thé pour les adultes. Adèle dit “Je prends un biscuit et un peu de chocolat, c'est vraiment bon !” Sophie ajoute : “Moi aussi, j'adore le chocolat chaud avec du sucre.”",
+      "vocabulario": [
+        {
+          "termo": "Chez",
+          "traducao": "na casa de",
+          "nivel": 2
+        },
+        {
+          "termo": "la grand-mère",
+          "traducao": "a avó",
+          "nivel": 2
+        },
+        {
+          "termo": "elle",
+          "traducao": "ela",
+          "nivel": 2
+        },
+        {
+          "termo": "prépare",
+          "traducao": "significa \"prepara\" do verbo préparer = preparar",
+          "nivel": 1
+        },
+        {
+          "termo": "goûter",
+          "traducao": "lanche da tarde",
+          "nivel": 1
+        },
+        {
+          "termo": "délicieux",
+          "traducao": "delicioso",
+          "nivel": 1
+        },
+        {
+          "termo": "sert",
+          "traducao": "significa \"serve\" do verbo servir = servir",
+          "nivel": 1
+        },
+        {
+          "termo": "des biscuits",
+          "traducao": "biscoitos",
+          "nivel": 1
+        },
+        {
+          "termo": "du chocolat",
+          "traducao": "chocolate",
+          "nivel": 1
+        },
+        {
+          "termo": "chaud",
+          "traducao": "quente",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 2
+        },
+        {
+          "termo": "du thé",
+          "traducao": "chá",
+          "nivel": 1
+        },
+        {
+          "termo": "pour",
+          "traducao": "para",
+          "nivel": 1
+        },
+        {
+          "termo": "les adultes",
+          "traducao": "os adultos",
+          "nivel": 1
+        },
+        {
+          "termo": "dit",
+          "traducao": "significa \"diz\" do verbo dire = dizer",
+          "nivel": 2
+        },
+        {
+          "termo": "Je",
+          "traducao": "eu",
+          "nivel": 1
+        },
+        {
+          "termo": "prends",
+          "traducao": "significa \"penho / pego / tomo\" do verbo prendre = pegar / tomar",
+          "nivel": 1
+        },
+        {
+          "termo": "un biscuit",
+          "traducao": "um biscoito",
+          "nivel": 1
+        },
+        {
+          "termo": "un peu de",
+          "traducao": "um pouco de",
+          "nivel": 1
+        },
+        {
+          "termo": "chocolat",
+          "traducao": "chocolate",
+          "nivel": 1
+        },
+        {
+          "termo": "c'est",
+          "traducao": "significa \"é/ está ou isto é/isto está\" do verbo être = ser / estar",
+          "nivel": 1
+        },
+        {
+          "termo": "vraiment",
+          "traducao": "realmente / de fato",
+          "nivel": 1
+        },
+        {
+          "termo": "bon",
+          "traducao": "bom",
+          "nivel": 1
+        },
+        {
+          "termo": "ajoute",
+          "traducao": "significa \"acrescenta / adiciona\" do verbo ajouter = acrescentar / adicionar",
+          "nivel": 1
+        },
+        {
+          "termo": "Moi aussi",
+          "traducao": "eu também",
+          "nivel": 1
+        },
+        {
+          "termo": "j'adore",
+          "traducao": "significa \"adoro\" do verbo adorer = adorar (com elisão de je)",
+          "nivel": 1
+        },
+        {
+          "termo": "avec",
+          "traducao": "com",
+          "nivel": 2
+        },
+        {
+          "termo": "du sucre",
+          "traducao": "açúcar",
+          "nivel": 1
+        }
+      ]
+    },
+    {
+      "texto": "Dans le jardin, le soleil brille et il fait chaud. Les enfants s'amusent beaucoup avec leur cousin. “Tu veux jouer au ballon avec moi ?” demande Léo à Laurent, qui accepte avec joie. Sophie et Adèle regardent les fleurs et parlent de leurs vacances à la plage, près de la mer.",
+      "vocabulario": [
+        {
+          "termo": "Dans",
+          "traducao": "em / dentro de",
+          "nivel": 2
+        },
+        {
+          "termo": "le jardin",
+          "traducao": "o jardim",
+          "nivel": 2
+        },
+        {
+          "termo": "le soleil",
+          "traducao": "o sol",
+          "nivel": 1
+        },
+        {
+          "termo": "brille",
+          "traducao": "significa \"brilha\" do verbo briller = brilhar",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 3
+        },
+        {
+          "termo": "il fait",
+          "traducao": "significa \"faz\" (para clima significa “está”) do verbo faire = fazer",
+          "nivel": 1
+        },
+        {
+          "termo": "chaud",
+          "traducao": "quente",
+          "nivel": 2
+        },
+        {
+          "termo": "Les enfants",
+          "traducao": "as crianças",
+          "nivel": 1
+        },
+        {
+          "termo": "s'amusent",
+          "traducao": "significa \"divertem-se\" do verbo pronominal s'amuser = divertir-se",
+          "nivel": 1
+        },
+        {
+          "termo": "beaucoup",
+          "traducao": "muito",
+          "nivel": 1
+        },
+        {
+          "termo": "avec",
+          "traducao": "com",
+          "nivel": 3
+        },
+        {
+          "termo": "leur cousin",
+          "traducao": "o primo deles/ o seu primo",
+          "nivel": 2
+        },
+        {
+          "termo": "Tu",
+          "traducao": "tu / você",
+          "nivel": 1
+        },
+        {
+          "termo": "veux",
+          "traducao": "significa \"quer\" do verbo vouloir = querer",
+          "nivel": 1
+        },
+        {
+          "termo": "jouer",
+          "traducao": "jogar / brincar",
+          "nivel": 1
+        },
+        {
+          "termo": "au ballon",
+          "traducao": "de bola",
+          "nivel": 1
+        },
+        {
+          "termo": "moi",
+          "traducao": "mim / eu",
+          "nivel": 1
+        },
+        {
+          "termo": "demande",
+          "traducao": "significa \"pergunta/pede\" do verbo demander = perguntar/pedir",
+          "nivel": 1
+        },
+        {
+          "termo": "à",
+          "traducao": "à / para",
+          "nivel": 1
+        },
+        {
+          "termo": "qui",
+          "traducao": "que / o qual",
+          "nivel": 1
+        },
+        {
+          "termo": "accepte",
+          "traducao": "significa \"aceita\" do verbo accepter = aceitar",
+          "nivel": 1
+        },
+        {
+          "termo": "avec",
+          "traducao": "com",
+          "nivel": 4
+        },
+        {
+          "termo": "joie",
+          "traducao": "alegria",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 4
+        },
+        {
+          "termo": "regardent",
+          "traducao": "significa \"olham / observam\" do verbo regarder = olhar / observar",
+          "nivel": 1
+        },
+        {
+          "termo": "les fleurs",
+          "traducao": "as flores",
+          "nivel": 1
+        },
+        {
+          "termo": "parlent",
+          "traducao": "significa \"falam\" do verbo parler = falar",
+          "nivel": 1
+        },
+        {
+          "termo": "de",
+          "traducao": "de / sobre",
+          "nivel": 1
+        },
+        {
+          "termo": "leurs vacances",
+          "traducao": "as férias delas / suas férias",
+          "nivel": 1
+        },
+        {
+          "termo": "à la plage",
+          "traducao": "na praia",
+          "nivel": 1
+        },
+        {
+          "termo": "près de",
+          "traducao": "perto de",
+          "nivel": 2
+        },
+        {
+          "termo": "la mer",
+          "traducao": "o mar",
+          "nivel": 1
+        }
+      ]
+    },
+    {
+      "texto": "Le soir, toute la famille prépare le dîner ensemble. Sophie et sa mère mélangent les légumes, pendant que Laurent découpe le pain de mie pour des sandwichs et demande: “On chauffe aussi de l'huile pour le poulet ?”. Adèle met la table avec des œufs cuits et un peu de farine de blé pour le dessert.",
+      "vocabulario": [
+        {
+          "termo": "Le soir",
+          "traducao": "à noite / de noite",
+          "nivel": 1
+        },
+        {
+          "termo": "toute",
+          "traducao": "toda",
+          "nivel": 1
+        },
+        {
+          "termo": "la famille",
+          "traducao": "a família",
+          "nivel": 1
+        },
+        {
+          "termo": "prépare",
+          "traducao": "significa \"prepara\" do verbo préparer = preparar",
+          "nivel": 2
+        },
+        {
+          "termo": "le dîner",
+          "traducao": "o jantar",
+          "nivel": 1
+        },
+        {
+          "termo": "ensemble",
+          "traducao": "juntos",
+          "nivel": 2
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 5
+        },
+        {
+          "termo": "sa mère",
+          "traducao": "sua mãe / a mãe dela",
+          "nivel": 1
+        },
+        {
+          "termo": "mélangent",
+          "traducao": "significa \"misturam\" do verbo mélanger = misturar",
+          "nivel": 1
+        },
+        {
+          "termo": "les légumes",
+          "traducao": "os legumes",
+          "nivel": 1
+        },
+        {
+          "termo": "pendant que",
+          "traducao": "enquanto",
+          "nivel": 1
+        },
+        {
+          "termo": "découpe",
+          "traducao": "significa \"recorta / fatia\" do verbo découper = recortar / fatiar",
+          "nivel": 1
+        },
+        {
+          "termo": "le pain de mie",
+          "traducao": "o pão de forma",
+          "nivel": 1
+        },
+        {
+          "termo": "pour",
+          "traducao": "para",
+          "nivel": 2
+        },
+        {
+          "termo": "des sandwichs",
+          "traducao": "sanduíches (quantidade indeterminada)",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 6
+        },
+        {
+          "termo": "demande",
+          "traducao": "significa \"pergunta\" do verbo demander = perguntar",
+          "nivel": 2
+        },
+        {
+          "termo": "On",
+          "traducao": "a gente / nós",
+          "nivel": 1
+        },
+        {
+          "termo": "chauffe",
+          "traducao": "significa \"esquenta / aquece\" do verbo chauffer = esquentar / aquecer",
+          "nivel": 1
+        },
+        {
+          "termo": "aussi",
+          "traducao": "também",
+          "nivel": 1
+        },
+        {
+          "termo": "de l'huile",
+          "traducao": "óleo / azeite (quantidade indeterminada)",
+          "nivel": 1
+        },
+        {
+          "termo": "le poulet",
+          "traducao": "o frango",
+          "nivel": 1
+        },
+        {
+          "termo": "met",
+          "traducao": "significa \"põe / coloca\" do verbo mettre = pôr / colocar",
+          "nivel": 1
+        },
+        {
+          "termo": "la table",
+          "traducao": "a mesa",
+          "nivel": 1
+        },
+        {
+          "termo": "avec",
+          "traducao": "com",
+          "nivel": 5
+        },
+        {
+          "termo": "des œufs",
+          "traducao": "ovos (quantidade indeterminada)",
+          "nivel": 1
+        },
+        {
+          "termo": "cuits",
+          "traducao": "cozidos",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 7
+        },
+        {
+          "termo": "un peu de",
+          "traducao": "um pouco de",
+          "nivel": 2
+        },
+        {
+          "termo": "farine de blé",
+          "traducao": "farinha de trigo",
+          "nivel": 1
+        },
+        {
+          "termo": "pour",
+          "traducao": "para",
+          "nivel": 3
+        },
+        {
+          "termo": "le dessert",
+          "traducao": "a sobremesa",
+          "nivel": 1
+        }
+      ]
+    },
+    {
+      "texto": "Après le dîner, ils mangent un gâteau et un peu de glace pour finir la soirée. “Vous êtes une belle famille”, dit la grand-mère avec un sourire. Laurent, Sophie et Adèle disent : “Nous aimons beaucoup ces moments ensemble !” Puis, ils vont se coucher, heureux et fatigués.",
+      "vocabulario": [
+        {
+          "termo": "Après",
+          "traducao": "depois de",
+          "nivel": 2
+        },
+        {
+          "termo": "le dîner",
+          "traducao": "o jantar",
+          "nivel": 2
+        },
+        {
+          "termo": "ils",
+          "traducao": "eles",
+          "nivel": 2
+        },
+        {
+          "termo": "mangent",
+          "traducao": "significa \"comem\" do verbo manger = comer",
+          "nivel": 1
+        },
+        {
+          "termo": "un gâteau",
+          "traducao": "um bolo",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 8
+        },
+        {
+          "termo": "un peu de",
+          "traducao": "um pouco de",
+          "nivel": 3
+        },
+        {
+          "termo": "glace",
+          "traducao": "sorvete",
+          "nivel": 1
+        },
+        {
+          "termo": "pour",
+          "traducao": "para",
+          "nivel": 4
+        },
+        {
+          "termo": "finir",
+          "traducao": "terminar / finalizar",
+          "nivel": 1
+        },
+        {
+          "termo": "la soirée",
+          "traducao": "a noite (começo da noite)",
+          "nivel": 1
+        },
+        {
+          "termo": "Vous",
+          "traducao": "vocês/o senhor/a senhora",
+          "nivel": 2
+        },
+        {
+          "termo": "êtes",
+          "traducao": "significa \"são / estão\" do verbo être = ser / estar",
+          "nivel": 1
+        },
+        {
+          "termo": "une belle famille",
+          "traducao": "uma bela família",
+          "nivel": 1
+        },
+        {
+          "termo": "dit",
+          "traducao": "significa \"diz\" do verbo dire = dizer",
+          "nivel": 3
+        },
+        {
+          "termo": "la grand-mère",
+          "traducao": "a avó",
+          "nivel": 3
+        },
+        {
+          "termo": "avec",
+          "traducao": "com",
+          "nivel": 6
+        },
+        {
+          "termo": "un sourire",
+          "traducao": "um sorriso",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 9
+        },
+        {
+          "termo": "disent",
+          "traducao": "significa \"dizem\" do verbo dire = dizer",
+          "nivel": 1
+        },
+        {
+          "termo": "Nous",
+          "traducao": "nós",
+          "nivel": 1
+        },
+        {
+          "termo": "aimons",
+          "traducao": "significa \"amamos / gostamos de\" do verbo aimer = amar / gostar",
+          "nivel": 1
+        },
+        {
+          "termo": "beaucoup",
+          "traducao": "muito",
+          "nivel": 2
+        },
+        {
+          "termo": "ces moments",
+          "traducao": "estes momentos",
+          "nivel": 1
+        },
+        {
+          "termo": "ensemble",
+          "traducao": "juntos",
+          "nivel": 3
+        },
+        {
+          "termo": "Puis",
+          "traducao": "depois / em seguida",
+          "nivel": 1
+        },
+        {
+          "termo": "vont",
+          "traducao": "significa \"vão\" do verbo aller = ir",
+          "nivel": 2
+        },
+        {
+          "termo": "se coucher",
+          "traducao": "deitar-se / ir dormir",
+          "nivel": 1
+        },
+        {
+          "termo": "heureux",
+          "traducao": "felizes",
+          "nivel": 1
+        },
+        {
+          "termo": "et",
+          "traducao": "e",
+          "nivel": 10
+        },
+        {
+          "termo": "fatigués",
+          "traducao": "cansados",
+          "nivel": 1
+        }
+      ]
+    }
+  ]
+}

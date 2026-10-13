@@ -1,0 +1,23 @@
+{
+  "rules": {
+    "games": {
+      "$pin": {
+        ".read": true,
+
+        "meta":       { ".write": true },
+        "paragrafos": { ".write": true },
+        "estado":     { ".write": true },
+
+        "jogadores": {
+          ".write": true,
+          "$id": {
+            ".validate": "!newData.exists() || newData.hasChildren(['apelido','personagem'])",
+            "apelido": { ".validate": "newData.isString() && newData.val().length >= 2 && newData.val().length <= 18" },
+            "ovos":    { ".validate": "newData.isNumber() && newData.val() >= 0" },
+            "paragrafo": { ".validate": "newData.isNumber() && newData.val() >= 0" }
+          }
+        }
+      }
+    }
+  }
+}
