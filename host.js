@@ -205,7 +205,7 @@ function telaEditor(){
         Cada <strong>parágrafo</strong> vira uma fase. No vocabulário, escreva os termos
         <strong>na ordem em que aparecem no texto</strong>, no formato
         <code>termo — tradução (nível)</code>. O nível define a cor e o custo:
-        nível 1 = grátis (verde), nível 2 = 1 ovo, nível 3 = 2 ovos… nível 10 ou mais = vermelho.
+        nível 1 = grátis (verde), nível 2 = 1 ovo, nível 3 = 2 ovos… nível 10 ou mais = roxo escuro.
         Cada aluno começa com ${OVOS_INICIAIS} ovos.
       </div>
     </div>
