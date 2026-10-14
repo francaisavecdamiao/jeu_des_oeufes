@@ -20,6 +20,7 @@ const P = {
   revelados:{},         // { parágrafo: { indiceDoVocab: true } }
   terminou:false,
   aba:'texto',          // texto | ranking
+  fala:false,           // leitura em voz alta (francês) — começa desativada
   ultima:null,          // último vocábulo clicado {p, v}
   jogadores:{},
   erro:'', resumed:false
@@ -285,6 +286,7 @@ function telaJogo(){
     <div class="abas">
       <button class="aba ${P.aba==='texto'?'on':''}" onclick="trocarAba('texto')">texto</button>
       <button class="aba ${P.aba==='ranking'?'on':''}" onclick="trocarAba('ranking')">ranking${posicaoEu() ? ' · ' + posicaoEu() + 'º' : ''}</button>
+      <button class="aba aba-fala ${P.fala?'on':''}" onclick="alternarFala()" aria-pressed="${P.fala}" title="ler as palavras em voz alta, em francês">${P.fala ? '🔊' : '🔇'} fala</button>
     </div>`;
   if(P.aba === 'ranking') return abas + cardRanking() + `<div class="footer-space"></div>`;
   if(!P.paragrafos) return abas + `<div class="home-card" style="animation:none"><p class="home-sub">carregando o texto…</p></div>`;
@@ -296,6 +298,37 @@ function posicaoEu(){
   return e ? e.pos : null;
 }
 function trocarAba(a){ if(P.aba === a) return; playSound('click'); P.aba = a; render(); }
+
+/* =========================================================
+   FALA — lê o termo em francês a cada clique (só se ativada)
+   ========================================================= */
+function vozFrancesa(){
+  const vs = (window.speechSynthesis && speechSynthesis.getVoices()) || [];
+  return vs.find(v => /^fr[-_]FR/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null;
+}
+function falar(texto){
+  if(!P.fala || !window.speechSynthesis || !texto) return;
+  try{
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(String(texto));
+    u.lang = 'fr-FR';                       // sempre francês
+    const v = vozFrancesa();
+    if(v){ u.voice = v; u.lang = v.lang; }
+    u.rate = 0.9;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+function alternarFala(){
+  if(!window.speechSynthesis){ alert('Este aparelho não tem leitura de voz disponível.'); return; }
+  P.fala = !P.fala;
+  playSound('click');
+  if(P.fala) falar('Bonjour');              // confirma e libera o áudio no celular
+  else { try{ speechSynthesis.cancel(); }catch(e){} }
+  render();
+}
+if(window.speechSynthesis && speechSynthesis.addEventListener){
+  speechSynthesis.addEventListener('voiceschanged', () => {});   // carrega a lista de vozes
+}
 
 function htmlTexto(pi){
   const p = P.paragrafos[pi];
@@ -350,7 +383,10 @@ function cardParagrafo(){
       ${listaTraducoes(P.par)}
     </div>
     <div class="footer-space"></div>
-    <button class="btn btn-block" onclick="proximoParagrafo()">${ultimo ? 'terminar' : 'próximo parágrafo'}</button>`;
+    <div class="nav-par">
+      ${P.par > 0 ? `<button class="btn btn-ghost" onclick="voltarParagrafo()">← voltar</button>` : ''}
+      <button class="btn" onclick="proximoParagrafo()">${ultimo ? 'terminar' : 'próximo parágrafo →'}</button>
+    </div>`;
 }
 
 /* clique no vocábulo: revela a tradução e cobra os ovos (só na primeira vez) */
@@ -360,6 +396,7 @@ function clicarVoc(vi){
   const vocab = listaDe(P.paragrafos[pi].vocabulario);
   const v = vocab[vi];
   if(!v) return;
+  falar(v.termo);
   if(!P.revelados[pi]) P.revelados[pi] = {};
   P.ultima = { p:pi, v:vi };
 
@@ -378,6 +415,19 @@ function clicarVoc(vi){
   render();
   const b = document.getElementById('ovosBadge');
   if(b){ b.classList.add('pop'); setTimeout(() => b.classList.remove('pop'), 450); }
+}
+
+function voltarParagrafo(){
+  if(!P.paragrafos || P.par <= 0) return;
+  playSound('click');
+  P.ultima = null;
+  P.par--;
+  try{ speechSynthesis.cancel(); }catch(e){}
+  const up = {};
+  up[`jogadores/${P.id}/paragrafo`] = P.par;
+  try{ gameRef(P.pin).update(up); }catch(e){}
+  render();
+  window.scrollTo(0, 0);
 }
 
 function proximoParagrafo(){
