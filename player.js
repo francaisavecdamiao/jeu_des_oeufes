@@ -301,29 +301,55 @@ function trocarAba(a){ if(P.aba === a) return; playSound('click'); P.aba = a; re
 
 /* =========================================================
    FALA — lê o termo em francês a cada clique (só se ativada)
+   velocidade: 60% da anterior (0.9 × 0.6 = 0.54)
+   atraso: 1,5 s depois do clique
    ========================================================= */
+const FALA_VELOCIDADE = 0.54;
+const FALA_ATRASO_MS  = 1500;
+let falaTimer = null;
+
 function vozFrancesa(){
   const vs = (window.speechSynthesis && speechSynthesis.getVoices()) || [];
   return vs.find(v => /^fr[-_]FR/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null;
 }
-function falar(texto){
-  if(!P.fala || !window.speechSynthesis || !texto) return;
+
+/* cancela fala em andamento e qualquer fala agendada */
+function pararFala(){
+  if(falaTimer){ clearTimeout(falaTimer); falaTimer = null; }
+  try{ if(window.speechSynthesis) speechSynthesis.cancel(); }catch(e){}
+}
+
+/* fala imediatamente (usado só pelo "Bonjour" de confirmação) */
+function falarAgora(texto){
+  if(!window.speechSynthesis || !texto) return;
   try{
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(String(texto));
     u.lang = 'fr-FR';                       // sempre francês
     const v = vozFrancesa();
     if(v){ u.voice = v; u.lang = v.lang; }
-    u.rate = 0.9;
+    u.rate = FALA_VELOCIDADE;
     speechSynthesis.speak(u);
   }catch(e){}
 }
+
+/* agenda a fala para 1,5 s depois do clique; um novo clique reinicia a contagem */
+function falar(texto){
+  if(!P.fala || !window.speechSynthesis || !texto) return;
+  if(falaTimer){ clearTimeout(falaTimer); falaTimer = null; }
+  falaTimer = setTimeout(() => {
+    falaTimer = null;
+    if(!P.fala) return;                     // foi desativada durante a espera
+    falarAgora(texto);
+  }, FALA_ATRASO_MS);
+}
+
 function alternarFala(){
   if(!window.speechSynthesis){ alert('Este aparelho não tem leitura de voz disponível.'); return; }
   P.fala = !P.fala;
   playSound('click');
-  if(P.fala) falar('Bonjour');              // confirma e libera o áudio no celular
-  else { try{ speechSynthesis.cancel(); }catch(e){} }
+  if(P.fala) falarAgora('Bonjour');         // confirma e libera o áudio no celular
+  else pararFala();
   render();
 }
 if(window.speechSynthesis && speechSynthesis.addEventListener){
@@ -422,7 +448,7 @@ function voltarParagrafo(){
   playSound('click');
   P.ultima = null;
   P.par--;
-  try{ speechSynthesis.cancel(); }catch(e){}
+  pararFala();
   const up = {};
   up[`jogadores/${P.id}/paragrafo`] = P.par;
   try{ gameRef(P.pin).update(up); }catch(e){}
@@ -435,6 +461,7 @@ function proximoParagrafo(){
   const total = P.paragrafos.length;
   playSound('fase');
   P.ultima = null;
+  pararFala();
   const up = {};
   if(P.par + 1 < total){
     P.par++;
