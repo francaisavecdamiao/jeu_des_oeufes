@@ -130,18 +130,26 @@ function serverNow(){ return Date.now() + serverOffset; }
 /* =========================================================
    VOCABULÁRIO — custo em ovos e cor de cada nível
    nível 1 = 0 ovos · nível 2 = 1 ovo · … · nível n = n-1 ovos
-   cores: 10 tons, do verde (1) ao vermelho (10 ou mais)
+   cores: 10 tons, do verde (1) ao roxo escuro (10 ou mais)
    ========================================================= */
 function custoNivel(n){ return Math.max(0, (Number(n)||1) - 1); }
 
-/* nível 1: verde · 2 → 5: amarelo → laranja · 5 → 10 (ou mais): laranja → vermelho */
+/* cores dos 10 níveis (nível 10 vale também para 10 ou mais) */
+const CORES_NIVEL = [
+  '#009900',   // 1  verde puro
+  '#7FFF00',   // 2  verde lima
+  '#FFD700',   // 3  amarelo esverdeado
+  '#BFBF00',   // 4  amarelo vivo
+  '#FF8C00',   // 5  laranja claro
+  '#FF4500',   // 6  laranja intenso
+  '#CC0000',   // 7  vermelho escuro
+  '#DC143C',   // 8  vermelho carmim
+  '#800080',   // 9  roxo
+  '#420042'    // 10 roxo escuro
+];
 function corNivel(n){
   const k = Math.min(10, Math.max(1, Math.round(Number(n)||1)));
-  if(k === 1) return 'hsl(120, 70%, 38%)';
-  let hue;
-  if(k <= 5) hue = 50 - ((k - 2) / 3) * (50 - 28);   // 50 (amarelo) → 28 (laranja)
-  else       hue = 28 - ((k - 5) / 5) * 28;          // 28 (laranja) → 0 (vermelho)
-  return `hsl(${hue.toFixed(0)}, 92%, 46%)`;
+  return CORES_NIVEL[k - 1];
 }
 function rotuloNivel(n){ return n >= 10 ? '10+' : String(n); }
 
